@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply w-[100px] rounded-xl border px-4 py-2 text-black hover:bg-gray-100;
+  }
+  .btn-purple {
+    @apply bg-purple-600 text-white hover:bg-purple-400;
+  }
+  .btn-md {
+    @apply w-[130px] rounded-2xl py-3 text-xl;
+  }
+  .btn-lg {
+    @apply w-[180px] rounded-3xl py-4 text-3xl;
+  }
+  .btn-active {
+    @apply active:bg-red-400;
+  }
+
+  .comment {
+    @apply rounded-2xl p-3;
+  }
+  .login-box {
+    @apply rounded-xl border p-1 pl-2;
+  }
+}

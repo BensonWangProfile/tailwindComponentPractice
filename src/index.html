@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Tailwind Components</title>
+  </head>
+  <body>
+    <section class="container mx-auto">
+      <h2 class="my-4 text-center">Button Components</h2>
+      <div class="flex flex-row items-center justify-center gap-4">
+        <button class="btn">button</button>
+        <button class="btn btn-purple btn-md">button</button>
+        <button class="btn btn-purple btn-lg btn-active">button</button>
+      </div>
+      <h2 class="my-4 text-center">Textarea</h2>
+      <label for="comment" class="mx-auto flex w-[30%] flex-col">
+        <textarea
+          class="comment peer drop-shadow-2xl focus:outline-none focus:invalid:ring-2 focus:invalid:ring-red-400"
+          placeholder="add your comment"
+          cols="10"
+          rows="5"
+          minlength="10"
+        ></textarea>
+        <p class="invisible pl-2 text-red-500 peer-invalid:visible">
+          add more than 10 words
+        </p>
+      </label>
+    </section>
+    <h2 class="my-4 text-center">
+      <a class="hover:text-gray-500" target="_blank" href="./peer.html">Peer</a>
+    </h2>
+    <!--  -->
+    <div
+      class="enroll mx-auto flex w-[400px] flex-col items-start rounded-lg border p-5 px-8"
+    >
+      <p class="py-3 text-xl font-semibold">訂位</p>
+      <p class="mt-2 after:text-red-500 after:content-['*']">姓名</p>
+      <input
+        class="w-full rounded-lg border pl-3"
+        type="text"
+        name=""
+        id=""
+        placeholder="王小明"
+      />
+      <p class="mt-2 after:text-red-500 after:content-['*']">人數</p>
+      <div class="flex gap-3">
+        <label for="" class="dark:text-gray-500">
+          <input type="radio" name="" id="" disabled />
+          單人桌
+        </label>
+        <label for="">
+          <input type="radio" name="" id="" />
+          雙人桌
+        </label>
+        <label for="">
+          <input type="radio" name="" id="" />
+          四人桌
+        </label>
+      </div>
+      <p class="mt-2 after:text-red-500 after:content-['*']">電話</p>
+      <input
+        class="w-full rounded-lg border pl-3"
+        type="text"
+        name=""
+        id=""
+        placeholder="0912-123-123"
+      />
+    </div>
+  </body>
+</html>

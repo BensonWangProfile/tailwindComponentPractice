@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../dist/output.css" />
+    <title>Tailwind Peer</title>
+  </head>
+  <body>
+    <section class="container mx-auto">
+      <h2 class="my-4 mx-auto w-[40%] bg-gray-300 text-center">
+        Peer checkbox
+      </h2>
+      <div class="mx-auto flex flex-row justify-around">
+        <!-- checkbox -->
+        <div class="flex flex-col items-center">
+          <label class="flex flex-row items-center" for="">
+            <input class="peer mr-2 h-5 w-5" type="checkbox" name="" id="" />
+            <span class="peer-checked:line-through">吃</span>
+          </label>
+          <label class="flex flex-row items-center" for="">
+            <input class="peer mr-2 h-5 w-5" type="checkbox" name="" id="" />
+            <span class="peer-checked:line-through">喝</span>
+          </label>
+        </div>
+        <!-- radio -->
+        <div class="flex flex-col items-start">
+          <label for="comments" class="flex items-center gap-3 font-medium">
+            <input
+              class="accent-pink-300 md:accent-pink-500"
+              type="radio"
+              name=""
+              id="comments"
+            />
+            Comments
+            <span class="font-thin"
+              >get a notified when someons posts a comment</span
+            >
+          </label>
+          <label
+            for="comments-hidden"
+            class="flex items-center gap-3 font-medium"
+          >
+            <input
+              class="peer/comments peer-checked/comments:text-sky-400"
+              type="radio"
+              name=""
+              id="comments-hidden"
+            />
+            Comments
+            <span class="hidden font-thin peer-checked/comments:block"
+              >get a notified when someons posts a comment</span
+            >
+          </label>
+        </div>
+      </div>
+      <!-- login -->
+      <h2 class="my-4 mx-auto w-[40%] bg-gray-300 text-center">Login Peer</h2>
+      <form class="mx-auto w-[30%]" action="">
+        <div class="flex flex-col">
+          <label for="email">email</label>
+          <input
+            class="login-box peer focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="email"
+            id="email"
+          />
+          <p class="invisible text-red-500 peer-invalid:visible">wrong email</p>
+        </div>
+
+        <div class="flex flex-col">
+          <label for="password">password</label>
+          <input
+            class="login-box peer focus:outline-none focus:ring-2 focus:ring-red-500"
+            type="password"
+            id="password"
+          />
+          <p class="invisible text-red-500 peer-invalid:visible">
+            wrong password
+          </p>
+        </div>
+      </form>
+      <div class="flex flex-col items-center">
+        <h2>筆記</h2>
+        <ul>
+          <li>disabled</li>
+          <li>peer-invaild:invisible</li>
+          <li>required</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>
